@@ -1,12 +1,17 @@
 export const sideMenuLinks = [
   {
+    route: '#home',
+    label: 'ホーム',
+    sectionId: 'home',
+  },
+  {
     route: '#about',
     label: '自己紹介',
     sectionId: 'about',
   },
   {
     route: '#skills',
-    label: '使用言語',
+    label: '使用技術',
     sectionId: 'skills',
   },
   {
