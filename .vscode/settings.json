@@ -1,0 +1,18 @@
+{
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.tokenColorCustomizations": {
+    "comments": "",
+    "textMateRules": []
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.prettier": "explicit"
+  },
+  "workbench.editor.customLabels.patterns": {
+    "**/index.*": "${dirname} .../${dirname(1)}",
+    "**/{page,layout,template,route,actions,hooks,components,utils,types}.{js,ts,jsx,tsx}": "${dirname}/${filename}.${extname} .../${dirname(1)}"
+  },
+  "cSpell.words": ["firestore", "hookform", "vals"]
+}
