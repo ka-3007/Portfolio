@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 import { HiMenu, HiX } from 'react-icons/hi';
@@ -46,34 +45,29 @@ function SideMenu() {
       {/* トグルボタン（モバイル用） */}
       <button
         onClick={toggleMenu}
-        className="fixed top-3 left-3 z-[60] p-2 lg:hidden bg-white border rounded-md shadow-md"
+        className="fixed top-3 left-3 z-[60] p-2 md:hidden bg-white border rounded-md shadow-md"
       >
         {isOpen ? <HiX className="text-2xl" /> : <HiMenu className="text-2xl" />}
       </button>
 
       {/* オーバーレイ（モバイル用） */}
-      {isOpen && <div className="fixed inset-0 bg-black opacity-50 z-40 lg:hidden" onClick={closeMobileMenu} />}
+      {isOpen && <div className="fixed inset-0 bg-black opacity-50 z-40 md:hidden" onClick={closeMobileMenu} />}
 
       {/* サイドメニュー */}
       <section
-        className={`
-          fixed left-0 top-0 z-50 flex h-screen w-[200px] flex-col 
-          justify-between py-10 px-[20px] bg-white border-r 
-          transition-transform duration-300 ease-in-out
-          ${isOpen ? 'translate-x-0' : '-translate-x-full'} 
-          lg:translate-x-0
-        `}
+        className={`fixed left-0 top-0 z-50 flex h-screen max-w-[300px] flex-col 
+        justify-between py-10 px-[20px] lg:px-[80px] max-lg:max-w-[146px]
+        bg-white border-r md:px-[20px]
+        transform transition-transform duration-300 ease-in-out
+        ${isOpen ? 'max-lg:translate-x-0' : 'max-md:-translate-x-full'} 
+        lg:translate-x-0
+      `}
       >
-        <div className="flex w-full flex-1 flex-col gap-10 justify-between items-center">
-          <div className="flex flex-col justify-center items-center gap-2 relative w-full">
-            <Image
-              src={'/assets/logo.png'}
-              width={100}
-              height={100}
-              alt="プロフィール画像"
-              className="absolute top-2"
-            />
-          </div>
+        <div
+          className="flex w-full flex-1 flex-col gap-10 justify-between
+      items-center"
+        >
+          <div className="flex flex-col justify-center items-center gap-2"></div>
 
           {/* 中メニューリンク */}
           <div className="w-full flex flex-col gap-3">

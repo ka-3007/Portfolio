@@ -21,7 +21,7 @@ function ProjectFilter({ activeCategory, setActiveCategory, setFiltered }: Proje
   }, [activeCategory, setFiltered]);
 
   return (
-    <div className="flex flex-wrap gap-5 my-7 justify-center md:justify-start items-center">
+    <div className="flex flex-wrap gap-5 my-7 justify-start items-center">
       {Object.entries(Category).map(([key, value]) => (
         <button
           key={key}

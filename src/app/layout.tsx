@@ -19,14 +19,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja">
-      <body className={m_PLUS_1p.className}>
+    <html lang="ja" suppressHydrationWarning>
+      <body className={m_PLUS_1p.className} suppressHydrationWarning>
         <main className="flex flex-row">
           <SideMenu />
-          <section
-            className="pl-[300px] max-lg:pl-[146px] max-md:pl-0 w-full min-h-screen overflow-hidden py-4"
-            id="home"
-          >
+          <section className="pl-[300px] max-lg:pl-[146px] max-md:pl-0 w-full min-h-screen overflow-hidden" id="home">
             {children}
           </section>
         </main>
