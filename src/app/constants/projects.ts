@@ -6,6 +6,7 @@ export type Project = {
   image: string; // プロジェクト画像のパス
   category: CategoryValueType[]; // Categoryの値の配列
   skills: string[]; // 使用技術の配列
+  githubUrl?: string;
   projectUrl: string; // プロジェクトURL
   deployed: boolean; // デプロイされたかどうか
 };
@@ -59,6 +60,24 @@ export const projects: Project[] = [
     skills: ['React Native', 'Firebase', 'Git'],
     projectUrl:
       'https://apps.apple.com/jp/app/%E9%98%B2%E7%81%BD%E3%82%A2%E3%83%97%E3%83%AA-%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%BC%E3%83%AD-for-%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC/id1668290965',
+    deployed: true,
+  },
+  {
+    name: 'Laravel sns',
+    image: '/assets/projects/laravel-sns.png',
+    category: [Category.LARAVEL, Category.PERSONAL],
+    skills: ['Laravel', 'Bootstrap', 'Vue.js', 'Docker', 'Git'],
+    githubUrl: 'https://github.com/ka-3007/laravel_sns/',
+    projectUrl: 'https://laravel-sns-deploy-main-lck0qf.laravel.cloud/',
+    deployed: true,
+  },
+  {
+    name: '家計簿アプリ',
+    image: '/assets/projects/household.png',
+    category: [Category.NEXTJS, Category.PERSONAL],
+    skills: ['Next.js', 'Firebase', 'Git'],
+    githubUrl: 'https://github.com/ka-3007/household-next-app',
+    projectUrl: 'https://household-next-app.vercel.app/',
     deployed: true,
   },
 ];

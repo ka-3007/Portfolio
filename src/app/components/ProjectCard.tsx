@@ -21,7 +21,7 @@ function ProjectCard({ name, githubUrl, image, skills, projectUrl, deployed }: P
       transition={{ duration: 0.3 }}
       className="mb-4 p-4 border border-gray-200 rounded-lg bg-whitesmoke shadow-md"
     >
-      <div className="h-[250px] flex items-center justify-center bg-white">
+      <div className="h-[200px] flex items-center justify-center bg-white">
         <Image src={image} alt="サンプル画像" width={600} height={400} className="object-contain w-full h-full" />
       </div>
 
