@@ -1,11 +1,10 @@
 'use client';
 
 import emailjs from '@emailjs/browser';
-import { SvgIcon } from '@mui/material';
 import React, { useRef } from 'react';
 import { AiFillBulb, AiFillTwitterSquare, AiFillGithub } from 'react-icons/ai';
 
-import ZennIcon from '@/icons/zenn.svg';
+import ZennIconLink from './common/ZennIconLink';
 
 function Contact() {
   const form = useRef<HTMLFormElement | null>(null);
@@ -70,11 +69,7 @@ function Contact() {
               <div className="flex flex-col gap-2">
                 <h5>SNS</h5>
                 <div className="flex gap-5">
-                  <a target="_blank" rel="noopener noreferrer" href="https://zenn.dev/milky" className="text-3l">
-                    <SvgIcon>
-                      <ZennIcon />
-                    </SvgIcon>
-                  </a>
+                  <ZennIconLink />
                   <a target="_blank" rel="noopener noreferrer" href="https://github.com/ka-3007/" className="text-3xl">
                     <AiFillGithub />
                   </a>

@@ -1,6 +1,9 @@
 import Image from 'next/image';
 import React from 'react';
+import { AiFillGithub } from 'react-icons/ai';
+
 import '../animations.css';
+import ZennIconLink from './common/ZennIconLink';
 
 function Hero() {
   return (
@@ -13,6 +16,12 @@ function Hero() {
             <span className="block text-primary">Portfolio</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-md">エンジニアとしての実績やスキルを紹介しています。</p>
+          <div className="flex gap-4 max-md:justify-center">
+            <ZennIconLink />
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/ka-3007/" className="text-3xl">
+              <AiFillGithub />
+            </a>
+          </div>
         </div>
 
         {/* 右側：ロゴ画像 */}
