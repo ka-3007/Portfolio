@@ -38,7 +38,8 @@ function Skills() {
           <SkillCard name="WordPress" imageSrc="/assets/skills/wordpress.png" rating={3} experienceYears={1} />
 
           <SkillCard name="Bootstrap" imageSrc="/assets/skills/bootstrap.png" rating={3} experienceYears={1} />
-          <SkillCard name="Tailwind CSS" imageSrc="/assets/skills/tailwindcss.png" rating={3} experienceYears={1} />
+          {/* <SkillCard name="Tailwind CSS" imageSrc="/assets/skills/tailwindcss.png" rating={3} experienceYears={1} /> */}
+          <SkillCard name="MUI" imageSrc="/assets/skills/materialui.png" rating={4} experienceYears={1} />
 
           <SkillCard name="Git" imageSrc="/assets/skills/git.png" rating={4} experienceYears={2} />
           <SkillCard name="Docker" imageSrc="/assets/skills/docker.png" rating={3.5} experienceYears={1} />
