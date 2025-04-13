@@ -9,7 +9,7 @@ interface ProjectModalProps {
   projectUrl: string;
   githubUrl?: string;
   description: string;
-  detailImages: string[];
+  detailImages?: string[];
   skills: string[];
 }
 
@@ -23,7 +23,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
   detailImages,
   skills,
 }) => {
-  const [selectedImage, setSelectedImage] = useState(detailImages[0]);
+  const [selectedImage, setSelectedImage] = useState(detailImages && detailImages[0]);
   if (!isOpen) return null;
 
   return (
@@ -43,9 +43,9 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             ×
           </button>
 
-          <div className="flex flex-col lg:flex-row gap-6">
+          <div className="flex flex-col lg:flex-row gap-8">
             {/* 左：テキスト */}
-            <div className="w-full lg:w-[40%] flex flex-col justify-start min-w-0">
+            <div className={`w-full ${!detailImages ? 'lg:w-full' : 'lg:w-[40%]'} flex flex-col justify-start min-w-0`}>
               <h2 className="text-2xl font-bold mb-4">{name}</h2>
               <p className="mb-4 whitespace-pre-line">{description}</p>
 
@@ -74,39 +74,43 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
               )}
             </div>
 
-            {/* 右：画像 */}
-            <div className="w-full lg:w-[60%] flex flex-col justify-center items-center flex-shrink-0 min-w-0">
-              <div className="w-full max-w-[700px] h-[350px] flex items-center justify-center bg-white border mb-4">
-                <Image
-                  src={`/assets/projects/detailImages/${selectedImage}`}
-                  alt="選択中の画像"
-                  width={800}
-                  height={600}
-                  className="object-contain w-full h-full cursor-pointer"
-                  onClick={() => setIsOpen(true)}
-                />
-              </div>
-
-              <div className="flex gap-2 overflow-x-auto justify-center w-full">
-                {detailImages.map((img, index) => (
-                  <div
-                    key={index}
-                    className={`w-24 h-16 border ${
-                      img === selectedImage ? 'border-blue-500' : 'border-gray-300'
-                    } cursor-pointer`}
-                    onClick={() => setSelectedImage(img)}
-                  >
+            {detailImages && (
+              <>
+                {/* 右：画像 */}
+                <div className="w-full lg:w-[60%] flex flex-col justify-center items-center">
+                  <div className="w-full lg:max-w-[700px] lg:h-[350px] max-w-[500px] h-[250px] flex items-center justify-center mb-4">
                     <Image
-                      src={`/assets/projects/detailImages/${img}`}
-                      alt={`画像${index + 1}`}
-                      width={100}
-                      height={80}
-                      className="object-cover w-full h-full"
+                      src={`/assets/projects/detailImages/${selectedImage}`}
+                      alt="選択中の画像"
+                      width={800}
+                      height={600}
+                      className="object-contain w-full h-full"
+                      onClick={() => setIsOpen(true)}
                     />
                   </div>
-                ))}
-              </div>
-            </div>
+
+                  <div className="flex gap-2 overflow-x-auto justify-center w-full">
+                    {detailImages.map((img, index) => (
+                      <div
+                        key={index}
+                        className={`w-24 h-16 border ${
+                          img === selectedImage ? 'border-blue-500' : 'border-gray-300'
+                        } cursor-pointer`}
+                        onClick={() => setSelectedImage(img)}
+                      >
+                        <Image
+                          src={`/assets/projects/detailImages/${img}`}
+                          alt={`画像${index + 1}`}
+                          width={100}
+                          height={80}
+                          className="object-cover w-full h-full"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>

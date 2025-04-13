@@ -12,7 +12,7 @@ export type ProjectCardProps = {
   skills: string[]; // 使用技術の配列
   projectUrl: string; // プロジェクトURL
   description: string;
-  detailImages: string[];
+  detailImages?: string[];
 };
 
 function ProjectCard({ name, githubUrl, image, skills, projectUrl, description, detailImages }: ProjectCardProps) {
