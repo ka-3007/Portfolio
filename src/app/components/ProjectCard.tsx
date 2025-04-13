@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
+
+import ProjectModal from './ProjectModal';
 
 export type ProjectCardProps = {
   name: string; // プロジェクト名
@@ -9,10 +11,13 @@ export type ProjectCardProps = {
   image: string; // 画像URL
   skills: string[]; // 使用技術の配列
   projectUrl: string; // プロジェクトURL
-  deployed: boolean; // デプロイされているかどうか
+  description: string;
+  detailImages: string[];
 };
 
-function ProjectCard({ name, githubUrl, image, skills, projectUrl, deployed }: ProjectCardProps) {
+function ProjectCard({ name, githubUrl, image, skills, projectUrl, description, detailImages }: ProjectCardProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -22,7 +27,14 @@ function ProjectCard({ name, githubUrl, image, skills, projectUrl, deployed }: P
       className="mb-4 p-4 border border-gray-200 rounded-lg bg-whitesmoke shadow-md"
     >
       <div className="h-[200px] flex items-center justify-center bg-white">
-        <Image src={image} alt="サンプル画像" width={600} height={400} className="object-contain w-full h-full" />
+        <Image
+          src={image}
+          alt="サンプル画像"
+          width={600}
+          height={400}
+          className="object-contain w-full h-full"
+          onClick={() => setIsOpen(true)}
+        />
       </div>
 
       <h3 className="ml-2 mt-2">{name}</h3>
@@ -49,17 +61,26 @@ function ProjectCard({ name, githubUrl, image, skills, projectUrl, deployed }: P
           </a>
         )}
 
-        {deployed ? (
-          <a
-            href={projectUrl}
-            target="_blank"
-            className="text-darkblue p-1
+        <a
+          href={projectUrl}
+          target="_blank"
+          className="text-darkblue p-1
           rounded-full text-2xl"
-          >
-            <AiFillEye />
-          </a>
-        ) : null}
+        >
+          <AiFillEye />
+        </a>
       </div>
+
+      <ProjectModal
+        name={name}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        projectUrl={projectUrl}
+        githubUrl={githubUrl}
+        description={description}
+        detailImages={detailImages}
+        skills={skills}
+      />
     </motion.div>
   );
 }
