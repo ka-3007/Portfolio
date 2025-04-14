@@ -105,4 +105,16 @@ export const projects: Project[] = [
     detailImages: ['household-image1.png', 'household-image2.png', 'household-image3.png'],
     period: '2週間',
   },
+  {
+    name: 'Portfolio',
+    image: '/assets/projects/portfolio.png',
+    category: [Category.NEXTJS, Category.PERSONAL],
+    skills: ['Next.js', 'Firebase', 'Tailwind CSS', 'Git'],
+    githubUrl: 'https://github.com/ka-3007/Portfolio',
+    projectUrl: '',
+    description: `このポートフォリオサイトは、Next.jsを使用して構築したシングルページのランディングページです。訪問者がスムーズに情報を得られるよう、構成やデザインにおいて「シンプルさ」と「分かりやすさ」を重視しました。
+                  主に自身がこれまでに携わってきたプロジェクトや使用している技術スタックを紹介しており、エンジニアとしてのスキルや経験を視覚的にも分かりやすく伝えられるよう工夫しています。`,
+    detailImages: ['portfolio-image1.png', 'portfolio-image2.png', 'portfolio-image3.png'],
+    period: '4日',
+  },
 ];
