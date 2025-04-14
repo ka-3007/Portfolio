@@ -7,7 +7,8 @@ export async function middleware(request: NextRequest) {
 
   // メンテナンスモードが有効なら、404ページにリダイレクト
   if (maintenanceMode) {
-    return NextResponse.redirect(new URL('/404', request.url));
+    request.nextUrl.pathname = '/404';
+    return NextResponse.rewrite(request.nextUrl);
   }
 
   // メンテナンスモードでない場合は次の処理に進む
