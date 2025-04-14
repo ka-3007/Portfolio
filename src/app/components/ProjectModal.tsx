@@ -2,6 +2,8 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 
+import type { SetStateAction } from 'jotai';
+
 interface ProjectModalProps {
   name: string;
   isOpen: boolean;
@@ -12,6 +14,7 @@ interface ProjectModalProps {
   detailImages?: string[];
   skills: string[];
   period: string;
+  setShowProjectDetail: (update: SetStateAction<boolean>) => void;
 }
 
 const ProjectModal: React.FC<ProjectModalProps> = ({
@@ -24,24 +27,33 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
   detailImages,
   skills,
   period,
+  setShowProjectDetail,
 }) => {
   const [selectedImage, setSelectedImage] = useState(detailImages && detailImages[0]);
+
   if (!isOpen) return null;
+
+  const handleClickOpen = () => {
+    setIsOpen(true);
+    setShowProjectDetail(true);
+  };
+
+  const handleClickClose = () => {
+    setIsOpen(false);
+    setShowProjectDetail(false);
+  };
 
   return (
     <div
       className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-      onClick={() => setIsOpen(false)}
+      onClick={handleClickClose}
     >
-      <div className="fixed inset-0 flex items-center justify-center z-50" onClick={() => setIsOpen(false)}>
+      <div className="fixed inset-0 flex items-center justify-center z-50" onClick={handleClickClose}>
         <div
           className="bg-white p-6 rounded-lg shadow-lg w-full max-w-7xl max-h-[80vh] overflow-y-auto relative mx-4"
           onClick={(e) => e.stopPropagation()}
         >
-          <button
-            onClick={() => setIsOpen(false)}
-            className="absolute top-2 right-2 text-gray-500 hover:text-black text-xl"
-          >
+          <button onClick={handleClickClose} className="absolute top-2 right-2 text-gray-500 hover:text-black text-xl">
             ×
           </button>
 
@@ -99,7 +111,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                       width={800}
                       height={600}
                       className="object-contain w-full h-full"
-                      onClick={() => setIsOpen(true)}
+                      onClick={handleClickOpen}
                     />
                   </div>
 

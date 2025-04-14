@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
+import { useSetAtom } from 'jotai';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
+
+import { showProjectDetailState } from '../jotai/atom';
 
 import ProjectModal from './ProjectModal';
 
@@ -27,6 +30,7 @@ function ProjectCard({
   period,
 }: ProjectCardProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const setShowProjectDetail = useSetAtom(showProjectDetailState);
 
   return (
     <motion.div
@@ -43,7 +47,10 @@ function ProjectCard({
           width={600}
           height={400}
           className="object-contain w-full h-full"
-          onClick={() => setIsOpen(true)}
+          onClick={() => {
+            setIsOpen(true);
+            setShowProjectDetail(true);
+          }}
         />
       </div>
 
@@ -86,6 +93,7 @@ function ProjectCard({
         detailImages={detailImages}
         skills={skills}
         period={period}
+        setShowProjectDetail={setShowProjectDetail}
       />
     </motion.div>
   );

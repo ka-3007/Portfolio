@@ -1,16 +1,19 @@
 'use client';
 
+import { useAtomValue } from 'jotai';
 import React, { useEffect, useState } from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 import { HiMenu, HiX } from 'react-icons/hi';
 
 import { sideMenuLinks } from '@/app/constants/sideMenuLinks';
 
+import { showProjectDetailState } from '../jotai/atom';
 import { useMenuStore } from '../store/useMenuStore';
 
 function SideMenu() {
   const { isOpen, closeMobileMenu, toggleMenu } = useMenuStore();
   const [activeLink, setActiveLink] = useState(sideMenuLinks[0]);
+  const showProjectDetail = useAtomValue(showProjectDetailState);
 
   const handleLinkClick = () => {
     closeMobileMenu(); // メニューを閉じる
@@ -43,12 +46,14 @@ function SideMenu() {
   return (
     <>
       {/* トグルボタン（モバイル用） */}
-      <button
-        onClick={toggleMenu}
-        className="fixed top-3 left-3 z-[60] p-2 md:hidden bg-white border rounded-md shadow-md"
-      >
-        {isOpen ? <HiX className="text-2xl" /> : <HiMenu className="text-2xl" />}
-      </button>
+      {!showProjectDetail && (
+        <button
+          onClick={toggleMenu}
+          className="fixed top-3 left-3 z-[60] p-2 md:hidden bg-white border rounded-md shadow-md"
+        >
+          {isOpen ? <HiX className="text-2xl" /> : <HiMenu className="text-2xl" />}
+        </button>
+      )}
 
       {/* オーバーレイ（モバイル用） */}
       {isOpen && <div className="fixed inset-0 bg-black opacity-50 z-40 md:hidden" onClick={closeMobileMenu} />}
