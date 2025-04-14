@@ -10,14 +10,18 @@ import TopButton from './components/TopButton';
 export default function Home() {
   return (
     <>
-      <SideMenu />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
-      <TopButton />
+      <main className="flex flex-row">
+        <section className="pl-[300px] max-lg:pl-[146px] max-md:pl-0 w-full min-h-screen overflow-hidden" id="home">
+          <SideMenu />
+          <Hero />
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
+          <Footer />
+          <TopButton />
+        </section>
+      </main>
     </>
   );
 }
