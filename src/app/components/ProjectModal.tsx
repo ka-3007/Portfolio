@@ -11,6 +11,7 @@ interface ProjectModalProps {
   description: string;
   detailImages?: string[];
   skills: string[];
+  period: string;
 }
 
 const ProjectModal: React.FC<ProjectModalProps> = ({
@@ -22,6 +23,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
   description,
   detailImages,
   skills,
+  period,
 }) => {
   const [selectedImage, setSelectedImage] = useState(detailImages && detailImages[0]);
   if (!isOpen) return null;
@@ -49,19 +51,31 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
               <h2 className="text-2xl font-bold mb-4">{name}</h2>
               <p className="mb-4 whitespace-pre-line">{description}</p>
 
-              <div className="flex gap-2 items-center w-full m-1">
-                {githubUrl && (
-                  <a href={githubUrl} target="_blank" className="text-darkblue p-1 rounded-full text-lg">
-                    <AiFillGithub />
-                  </a>
-                )}
-                <a href={projectUrl} target="_blank" className="text-darkblue p-1 rounded-full text-2xl">
-                  <AiFillEye />
-                </a>
+              <div className="flex flex-row items-start gap-x-20 flex-wrap mb-4">
+                {/* 期間 */}
+                <div>
+                  <h3 className="text-lg font-semibold mb-1">期間</h3>
+                  <p className="text-md">{period}</p>
+                </div>
+
+                {/* URL */}
+                <div>
+                  <h3 className="text-lg font-semibold mb-1">URL</h3>
+                  <div className="flex gap-2 items-center">
+                    {githubUrl && (
+                      <a href={githubUrl} target="_blank" className="text-darkblue px-1 rounded-full text-lg">
+                        <AiFillGithub />
+                      </a>
+                    )}
+                    <a href={projectUrl} target="_blank" className="text-darkblue px-1 rounded-full text-2xl">
+                      <AiFillEye />
+                    </a>
+                  </div>
+                </div>
               </div>
 
               {skills?.length > 0 && (
-                <div className="mt-6">
+                <div className="mt-2">
                   <h3 className="text-lg font-semibold mb-2">使用技術</h3>
                   <div className="flex flex-wrap gap-2 text-sm">
                     {skills.map((skill, index) => (

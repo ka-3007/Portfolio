@@ -6,16 +6,26 @@ import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import ProjectModal from './ProjectModal';
 
 export type ProjectCardProps = {
-  name: string; // プロジェクト名
-  githubUrl?: string; // GitHub URL (省略可能)
-  image: string; // 画像URL
-  skills: string[]; // 使用技術の配列
-  projectUrl: string; // プロジェクトURL
+  name: string;
+  githubUrl?: string;
+  image: string;
+  skills: string[];
+  projectUrl: string;
   description: string;
   detailImages?: string[];
+  period: string;
 };
 
-function ProjectCard({ name, githubUrl, image, skills, projectUrl, description, detailImages }: ProjectCardProps) {
+function ProjectCard({
+  name,
+  githubUrl,
+  image,
+  skills,
+  projectUrl,
+  description,
+  detailImages,
+  period,
+}: ProjectCardProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -51,12 +61,7 @@ function ProjectCard({ name, githubUrl, image, skills, projectUrl, description, 
       )}
       <div className="flex gap-2 items-center w-full m-1">
         {githubUrl && (
-          <a
-            href={githubUrl}
-            target="_blank"
-            className="text-darkblue p-1
-        rounded-full text-lg"
-          >
+          <a href={githubUrl} target="_blank" className="text-darkblue p-1 rounded-full text-lg">
             <AiFillGithub />
           </a>
         )}
@@ -80,6 +85,7 @@ function ProjectCard({ name, githubUrl, image, skills, projectUrl, description, 
         description={description}
         detailImages={detailImages}
         skills={skills}
+        period={period}
       />
     </motion.div>
   );

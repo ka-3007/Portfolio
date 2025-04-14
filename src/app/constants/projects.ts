@@ -10,6 +10,7 @@ export type Project = {
   projectUrl: string; // プロジェクトURL
   description: string; // 説明文
   detailImages?: string[]; // 詳細ページで使用する画像
+  period: string; //　期間
 };
 
 export const projects: Project[] = [
@@ -23,6 +24,7 @@ export const projects: Project[] = [
                   さらに、S3に画像を保存する機能を改修し、従来のマウント保存方式から直接S3に保存できるように変更。これにより、運用の効率化を図ることができました。
                   また、ドメイン移管作業では、リリース手順書の作成をはじめ、テスト項目の洗い出しからテスト実施まで一貫して担当し、システムの移行がスムーズに進行するようサポートしました。`,
     detailImages: ['tobitate-image1.png', 'tobitate-image2.png', 'tobitate-image3.png'],
+    period: '1年',
   },
   {
     name: 'MYヘルスケアクラウド',
@@ -32,6 +34,7 @@ export const projects: Project[] = [
     projectUrl: 'https://www.hcloud.jp/',
     description: `B to B 向けヘルスケアWebサービスの開発において、バグの調査・修正を行い、システムの安定性を確保しました。クライアントとの密なやり取りを通じて、有休情報のダウンロード機能や従業員人数集計バッジ、インボイス機能の改修などを担当。特に、業務効率化に直結する機能改善を実施しました。
                   フロントエンドはVue.jsを使用しており、ユーザーインターフェースの改善にも貢献。クライアントのニーズに応じて、柔軟に対応しながら機能追加や改修を行いました。`,
+    period: '1年',
   },
   {
     name: '引越しれんらく帳',
@@ -43,6 +46,7 @@ export const projects: Project[] = [
                   また、Yahoo認証機能の改修や、手続き別提供エリア除外機能の追加を行い、ユーザー体験をよりスムーズにしました。さらに、SFTPファイル送信機能の改修や住所マスタメンテナンスを実施し、データ管理の効率化に貢献しました。
                   その他にも、必要な機能改修を行い、サービスの品質向上をサポートしました。全体的に、クライアントのニーズに対応し、システムの信頼性と利便性を向上させることに注力しました。`,
     detailImages: ['hikkoshi-image1.png', 'hikkoshi-image2.png', 'hikkoshi-image3.png', 'hikkoshi-image4.png'],
+    period: '1年',
   },
   {
     name: 'クロスゼロ for ビジネス',
@@ -55,6 +59,7 @@ export const projects: Project[] = [
                   また、申し込み画面の新規作成に加え、マニュアルのHTMLコーディングやテスト実施も担当し、ユーザー向けのドキュメント整備と品質保証にも貢献しました。
                   フロントエンドからバックエンド、運用面まで幅広く関わり、機能性と実用性の両立を意識した開発を行いました。`,
     detailImages: ['x-zero-image1.png', 'x-zero-image2.png', 'x-zero-image3.png'],
+    period: '1年',
   },
   {
     name: 'クロスゼロ for ビジネス (スマホアプリ)',
@@ -68,6 +73,7 @@ export const projects: Project[] = [
                   また、避難所マップのフィルター機能の改修、さらにアプリ内にレビューを表示する機能の新規追加など、多角的に機能拡充を図りました。
                   ユーザーの使いやすさと、緊急時における確実な情報提供を両立させるため、UI/UXの改善にも意識を向けながら、幅広い機能開発に携わりました。`,
     detailImages: ['x-zero-mobile-image1.png', 'x-zero-mobile-image2.png', 'x-zero-mobile-image3.png'],
+    period: '1年',
   },
   {
     name: 'Laravel sns',
@@ -85,6 +91,7 @@ export const projects: Project[] = [
       'laravel-sns-image4.png',
       'laravel-sns-image5.png',
     ],
+    period: '1週間',
   },
   {
     name: '家計簿アプリ',
@@ -96,5 +103,6 @@ export const projects: Project[] = [
     description: `このアプリは、家計簿管理を簡単かつ効率的に行えるWebアプリケーションです。Next.jsで実装されており、シングルページアプリケーションとして動作します。Firebase Authenticationを使用してユーザー認証を行い、収支や収入を簡単に登録できます。登録した収支はカレンダーに表示され、月ごとの収入・支出・合計を一目で把握することができます。
                   また、基本的なカテゴリに加えて、ユーザー自身でカスタムカテゴリを追加することができ、より詳細に収支を管理することができます。月別の収支サマリーを視覚的に表示し、カテゴリごとのグラフも確認できるため、収支状況を簡単に理解することができます。`,
     detailImages: ['household-image1.png', 'household-image2.png', 'household-image3.png'],
+    period: '2週間',
   },
 ];
