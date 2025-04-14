@@ -3,12 +3,14 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
+import SideMenu from './components/SideMenu';
 import Skills from './components/Skills';
 import TopButton from './components/TopButton';
 
 export default function Home() {
   return (
     <>
+      <SideMenu />
       <Hero />
       <About />
       <Skills />

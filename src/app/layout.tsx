@@ -1,7 +1,6 @@
 import { M_PLUS_1p } from 'next/font/google';
 
 import './globals.css';
-import SideMenu from './components/SideMenu';
 
 const m_PLUS_1p = M_PLUS_1p({
   subsets: ['latin'],
@@ -22,7 +21,6 @@ export default function RootLayout({
     <html lang="ja" suppressHydrationWarning>
       <body className={m_PLUS_1p.className} suppressHydrationWarning>
         <main className="flex flex-row">
-          <SideMenu />
           <section className="pl-[300px] max-lg:pl-[146px] max-md:pl-0 w-full min-h-screen overflow-hidden" id="home">
             {children}
           </section>
