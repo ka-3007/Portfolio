@@ -79,7 +79,7 @@ export const projects: Project[] = [
     name: 'Laravel sns',
     image: '/assets/projects/laravel-sns.png',
     category: [Category.LARAVEL, Category.PERSONAL],
-    skills: ['Laravel', 'Bootstrap', 'Vue.js', 'PostgreSQL', 'Docker', 'Git'],
+    skills: ['Laravel', 'Bootstrap', 'Vue.js', 'PostgreSQL', 'Docker', 'Git', 'Laravel Cloud'],
     githubUrl: 'https://github.com/ka-3007/laravel_sns/',
     projectUrl: 'https://laravel-sns-deploy-main-lck0qf.laravel.cloud/',
     description: `LaravelとDockerを使ってSNS風のWebアプリケーションを開発しました。Docker Composeを利用し、Laravel、PostgreSQL、Nginxなどのサービスを独立したコンテナとして構成することで、開発環境と本番環境間での差異を最小限に抑えました。
@@ -97,7 +97,7 @@ export const projects: Project[] = [
     name: '家計簿アプリ',
     image: '/assets/projects/household.png',
     category: [Category.NEXTJS, Category.PERSONAL],
-    skills: ['Next.js', 'Firebase', 'MUI', 'Git'],
+    skills: ['Next.js', 'Firebase', 'MUI', 'Git', 'Vercel'],
     githubUrl: 'https://github.com/ka-3007/household-next-app',
     projectUrl: 'https://household-next-app.vercel.app/',
     description: `このアプリは、家計簿管理を簡単かつ効率的に行えるWebアプリケーションです。Next.jsで実装されており、シングルページアプリケーションとして動作します。Firebase Authenticationを使用してユーザー認証を行い、収支や収入を簡単に登録できます。登録した収支はカレンダーに表示され、月ごとの収入・支出・合計を一目で把握することができます。
@@ -109,7 +109,7 @@ export const projects: Project[] = [
     name: 'Portfolio',
     image: '/assets/projects/portfolio.png',
     category: [Category.NEXTJS, Category.PERSONAL],
-    skills: ['Next.js', 'Firebase', 'Tailwind CSS', 'Git'],
+    skills: ['Next.js', 'Firebase', 'Tailwind CSS', 'Git', 'Vercel'],
     githubUrl: 'https://github.com/ka-3007/Portfolio',
     projectUrl: 'https://portfolio-five-blond-82.vercel.app/',
     description: `このポートフォリオサイトは、Next.jsを使用して構築したシングルページのランディングページです。訪問者がスムーズに情報を得られるよう、構成やデザインにおいて「シンプルさ」と「分かりやすさ」を重視しました。
