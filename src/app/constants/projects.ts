@@ -102,7 +102,7 @@ export const projects: Project[] = [
     projectUrl: 'https://household-next-app.vercel.app/',
     description: `このアプリは、家計簿管理を簡単かつ効率的に行えるWebアプリケーションです。Next.jsで実装されており、シングルページアプリケーションとして動作します。Firebase Authenticationを使用してユーザー認証を行い、収支や収入を簡単に登録できます。登録した収支はカレンダーに表示され、月ごとの収入・支出・合計を一目で把握することができます。
                   また、基本的なカテゴリに加えて、ユーザー自身でカスタムカテゴリを追加することができ、より詳細に収支を管理することができます。月別の収支サマリーを視覚的に表示し、カテゴリごとのグラフも確認できるため、収支状況を簡単に理解することができます。`,
-    detailImages: ['household-image1.png', 'household-image2.png', 'household-image3.png'],
+    detailImages: ['household-image1.png', 'household-image2.png', 'household-image3.png', 'household-image4.png'],
     period: '2週間',
   },
   {
