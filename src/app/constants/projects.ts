@@ -79,7 +79,7 @@ export const projects: Project[] = [
     name: 'Laravel sns',
     image: '/assets/projects/laravel-sns.png',
     category: [Category.LARAVEL, Category.PERSONAL],
-    skills: ['Laravel', 'Bootstrap', 'Vue.js', 'PostgreSQL', 'Docker', 'Git', 'Laravel Cloud'],
+    skills: ['Laravel', 'Bootstrap', 'Vue.js', 'Firebase', 'PostgreSQL', 'Docker', 'Git', 'Laravel Cloud'],
     githubUrl: 'https://github.com/ka-3007/laravel_sns/',
     projectUrl: 'https://laravel-sns-deploy-main-lck0qf.laravel.cloud/',
     description: `LaravelとDockerを使ってSNS風のWebアプリケーションを開発しました。Docker Composeを利用し、Laravel、PostgreSQL、Nginxなどのサービスを独立したコンテナとして構成することで、開発環境と本番環境間での差異を最小限に抑えました。
