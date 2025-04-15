@@ -57,7 +57,7 @@ function ProjectCard({
       <h3 className="ml-2 mt-2">{name}</h3>
 
       {/* 使用技術セクション */}
-      {skills?.length > 0 && (
+      {/* {skills?.length > 0 && (
         <div className="mt-2 flex flex-wrap gap-2 text-xs text-white">
           {skills.map((skill, index) => (
             <span key={index} className="bg-darkblue px-2 py-1 rounded-full">
@@ -65,7 +65,7 @@ function ProjectCard({
             </span>
           ))}
         </div>
-      )}
+      )} */}
       <div className="flex gap-2 items-center w-full m-1">
         {githubUrl && (
           <a href={githubUrl} target="_blank" className="text-darkblue p-1 rounded-full text-lg">
