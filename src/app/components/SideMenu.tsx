@@ -101,7 +101,9 @@ function SideMenu() {
                 <AiFillGithub />
               </a>
             </div>
-            <p className="max-lg:hidden">© 2025 KY</p>
+            <p className="max-lg:hidden" style={{ minWidth: '200px' }}>
+              © 2025 KY
+            </p>
           </div>
         </div>
       </section>
