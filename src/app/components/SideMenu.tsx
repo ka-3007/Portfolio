@@ -101,7 +101,7 @@ function SideMenu() {
                 <AiFillGithub />
               </a>
             </div>
-            <p className="max-lg:hidden">© 2025 Kaito Yamada</p>
+            <p className="max-lg:hidden">© 2025 KY</p>
           </div>
         </div>
       </section>
