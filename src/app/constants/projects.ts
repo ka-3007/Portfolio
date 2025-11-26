@@ -133,7 +133,7 @@ export const projects: Project[] = [
     name: 'デスクSNS',
     image: '/assets/projects/desklog.png',
     category: [Category.NEXTJS, Category.LARAVEL, Category.PERSONAL],
-    skills: ['Next.js', 'Laravel', 'Git', 'Vercel', 'MySQL', 'AWS', 'Docker', 'CSS'],
+    skills: ['Next.js', 'Laravel', 'Git', 'Vercel', 'PostgreSQL', 'AWS', 'Docker', 'CSS'],
     projectUrl: 'https://desklog-seven.vercel.app/',
     description: `このデスクSNSは、Next.js を用いたフロントエンドと Laravel によるバックエンドで構築した、デスク環境の共有に特化したSNSアプリです。
                   ユーザーは自身のデスクまわりを写真と説明文とともに投稿でき、その投稿はタイムラインへ流れ、フォローしているユーザーのデスクをまとめて閲覧できます。投稿にはコメントを残すことができ、気になったデスクやアイテムについて意見を交わしたり、作業環境の工夫を共有したりと、ゆるやかなコミュニケーションが生まれる仕組みになっています。
