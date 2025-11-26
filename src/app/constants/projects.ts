@@ -75,36 +75,36 @@ export const projects: Project[] = [
     detailImages: ['x-zero-mobile-image1.png', 'x-zero-mobile-image2.png', 'x-zero-mobile-image3.png'],
     period: '1年',
   },
-  {
-    name: 'Laravel sns',
-    image: '/assets/projects/laravel-sns.png',
-    category: [Category.LARAVEL, Category.PERSONAL],
-    skills: ['Laravel', 'Bootstrap', 'Vue.js', 'Firebase', 'PostgreSQL', 'Docker', 'Git', 'Laravel Cloud'],
-    githubUrl: 'https://github.com/ka-3007/laravel_sns/',
-    projectUrl: 'https://laravel-sns-deploy-main-lck0qf.laravel.cloud/',
-    description: `LaravelとDockerを使ってSNS風のWebアプリケーションを開発しました。Docker Composeを利用し、Laravel、PostgreSQL、Nginxなどのサービスを独立したコンテナとして構成することで、開発環境と本番環境間での差異を最小限に抑えました。
-                  機能面では、Laravelの標準的な認証機能を活用し、ユーザー登録、ログイン機能に加えて、ユーザー同士がフォローし合える機能も実装しています。さらに、画像の保存にはFirebase Storageを採用し、ユーザーがアップロードした画像をクラウド上に保存します。Vue.jsを一部導入し、「いいね」機能や画像のプレビュー表示を実現。フロントエンドとバックエンドの連携により、スムーズなユーザー体験を提供しています。 `,
-    detailImages: [
-      'laravel-sns-image1.png',
-      'laravel-sns-image2.png',
-      'laravel-sns-image3.png',
-      'laravel-sns-image4.png',
-      'laravel-sns-image5.png',
-    ],
-    period: '1週間',
-  },
-  {
-    name: '家計簿アプリ',
-    image: '/assets/projects/household.png',
-    category: [Category.NEXTJS, Category.PERSONAL],
-    skills: ['Next.js', 'Firebase', 'MUI', 'Git', 'Vercel'],
-    githubUrl: 'https://github.com/ka-3007/household-next-app',
-    projectUrl: 'https://household-next-app.vercel.app/',
-    description: `このアプリは、家計簿管理を簡単かつ効率的に行えるWebアプリケーションです。Next.jsで実装されており、シングルページアプリケーションとして動作します。Firebase Authenticationを使用してユーザー認証を行い、収支や収入を簡単に登録できます。登録した収支はカレンダーに表示され、月ごとの収入・支出・合計を一目で把握することができます。
-                  また、基本的なカテゴリに加えて、ユーザー自身でカスタムカテゴリを追加することができ、より詳細に収支を管理することができます。月別の収支サマリーを視覚的に表示し、カテゴリごとのグラフも確認できるため、収支状況を簡単に理解することができます。`,
-    detailImages: ['household-image1.png', 'household-image2.png', 'household-image3.png', 'household-image4.png'],
-    period: '2週間',
-  },
+  // {
+  //   name: 'Laravel sns',
+  //   image: '/assets/projects/laravel-sns.png',
+  //   category: [Category.LARAVEL, Category.PERSONAL],
+  //   skills: ['Laravel', 'Bootstrap', 'Vue.js', 'Firebase', 'PostgreSQL', 'Docker', 'Git', 'Laravel Cloud'],
+  //   githubUrl: 'https://github.com/ka-3007/laravel_sns/',
+  //   projectUrl: 'https://laravel-sns-deploy-main-lck0qf.laravel.cloud/',
+  //   description: `LaravelとDockerを使ってSNS風のWebアプリケーションを開発しました。Docker Composeを利用し、Laravel、PostgreSQL、Nginxなどのサービスを独立したコンテナとして構成することで、開発環境と本番環境間での差異を最小限に抑えました。
+  //                 機能面では、Laravelの標準的な認証機能を活用し、ユーザー登録、ログイン機能に加えて、ユーザー同士がフォローし合える機能も実装しています。さらに、画像の保存にはFirebase Storageを採用し、ユーザーがアップロードした画像をクラウド上に保存します。Vue.jsを一部導入し、「いいね」機能や画像のプレビュー表示を実現。フロントエンドとバックエンドの連携により、スムーズなユーザー体験を提供しています。 `,
+  //   detailImages: [
+  //     'laravel-sns-image1.png',
+  //     'laravel-sns-image2.png',
+  //     'laravel-sns-image3.png',
+  //     'laravel-sns-image4.png',
+  //     'laravel-sns-image5.png',
+  //   ],
+  //   period: '1週間',
+  // },
+  // {
+  //   name: '家計簿アプリ',
+  //   image: '/assets/projects/household.png',
+  //   category: [Category.NEXTJS, Category.PERSONAL],
+  //   skills: ['Next.js', 'Firebase', 'MUI', 'Git', 'Vercel'],
+  //   githubUrl: 'https://github.com/ka-3007/household-next-app',
+  //   projectUrl: 'https://household-next-app.vercel.app/',
+  //   description: `このアプリは、家計簿管理を簡単かつ効率的に行えるWebアプリケーションです。Next.jsで実装されており、シングルページアプリケーションとして動作します。Firebase Authenticationを使用してユーザー認証を行い、収支や収入を簡単に登録できます。登録した収支はカレンダーに表示され、月ごとの収入・支出・合計を一目で把握することができます。
+  //                 また、基本的なカテゴリに加えて、ユーザー自身でカスタムカテゴリを追加することができ、より詳細に収支を管理することができます。月別の収支サマリーを視覚的に表示し、カテゴリごとのグラフも確認できるため、収支状況を簡単に理解することができます。`,
+  //   detailImages: ['household-image1.png', 'household-image2.png', 'household-image3.png', 'household-image4.png'],
+  //   period: '2週間',
+  // },
   {
     name: 'Portfolio',
     image: '/assets/projects/portfolio.png',
@@ -116,5 +116,17 @@ export const projects: Project[] = [
                   主に自身がこれまでに携わってきたプロジェクトや使用している技術スタックを紹介しており、エンジニアとしてのスキルや経験を視覚的にも分かりやすく伝えられるよう工夫しています。`,
     detailImages: ['portfolio-image1.png', 'portfolio-image2.png', 'portfolio-image3.png', 'portfolio-image4.png'],
     period: '4日',
+  },
+  {
+    name: 'wikiシステム',
+    image: '/assets/projects/wiki.png',
+    category: [Category.NEXTJS, Category.PERSONAL],
+    skills: ['Next.js', 'Firebase', 'Git', 'Vercel', 'Tailwind CSS'],
+    projectUrl: 'https://wiki-system-master.vercel.app/',
+    description: `このWikiシステムは、Next.jsとFirebaseを基盤として構築したユーザー参加型の情報共有プラットフォームです。
+                  ユーザー自身がWikiページを作成・編集できるほか、各ページにはコメント機能も備えており、知識を補完したり意見交換を行ったりと、共同編集型のコミュニケーションが可能です。技術スタックの特性を活かし、リアルタイムで反映される編集や高速なページ遷移など、スムーズな操作体験を提供することを目指しています。
+                  なお、本システムは現在も開発を進めている段階のため、一部に不具合が発生する可能性があります。`,
+    detailImages: ['wiki-image1.png'],
+    period: '1年',
   },
 ];
