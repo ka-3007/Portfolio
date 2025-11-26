@@ -126,7 +126,19 @@ export const projects: Project[] = [
     description: `このWikiシステムは、Next.jsとFirebaseを基盤として構築したユーザー参加型の情報共有プラットフォームです。
                   ユーザー自身がWikiページを作成・編集できるほか、各ページにはコメント機能も備えており、知識を補完したり意見交換を行ったりと、共同編集型のコミュニケーションが可能です。技術スタックの特性を活かし、リアルタイムで反映される編集や高速なページ遷移など、スムーズな操作体験を提供することを目指しています。
                   なお、本システムは現在も開発を進めている段階のため、一部に不具合が発生する可能性があります。`,
-    detailImages: ['wiki-image1.png'],
+    detailImages: ['wiki-image1.png', 'wiki-image2.png'],
+    period: '1年',
+  },
+  {
+    name: 'デスクSNS',
+    image: '/assets/projects/desklog.png',
+    category: [Category.NEXTJS, Category.LARAVEL, Category.PERSONAL],
+    skills: ['Next.js', 'Laravel', 'Git', 'Vercel', 'MySQL', 'AWS', 'Docker', 'CSS'],
+    projectUrl: 'https://desklog-seven.vercel.app/',
+    description: `このデスクSNSは、Next.js を用いたフロントエンドと Laravel によるバックエンドで構築した、デスク環境の共有に特化したSNSアプリです。
+                  ユーザーは自身のデスクまわりを写真と説明文とともに投稿でき、その投稿はタイムラインへ流れ、フォローしているユーザーのデスクをまとめて閲覧できます。投稿にはコメントを残すことができ、気になったデスクやアイテムについて意見を交わしたり、作業環境の工夫を共有したりと、ゆるやかなコミュニケーションが生まれる仕組みになっています。
+                  また、検索機能により、特定のアイテムを探したり、好みのワークスペースを見つけやすい構成を意識しています。
+                  デスクという個性が表れる空間を共有し、他のユーザーとつながりながら新しい発見を得られる場を目指して開発したサービスです。`,
     period: '1年',
   },
 ];
