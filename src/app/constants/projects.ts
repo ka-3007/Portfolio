@@ -75,36 +75,6 @@ export const projects: Project[] = [
     detailImages: ['x-zero-mobile-image1.png', 'x-zero-mobile-image2.png', 'x-zero-mobile-image3.png'],
     period: '1年',
   },
-  // {
-  //   name: 'Laravel sns',
-  //   image: '/assets/projects/laravel-sns.png',
-  //   category: [Category.LARAVEL, Category.PERSONAL],
-  //   skills: ['Laravel', 'Bootstrap', 'Vue.js', 'Firebase', 'PostgreSQL', 'Docker', 'Git', 'Laravel Cloud'],
-  //   githubUrl: 'https://github.com/ka-3007/laravel_sns/',
-  //   projectUrl: 'https://laravel-sns-deploy-main-lck0qf.laravel.cloud/',
-  //   description: `LaravelとDockerを使ってSNS風のWebアプリケーションを開発しました。Docker Composeを利用し、Laravel、PostgreSQL、Nginxなどのサービスを独立したコンテナとして構成することで、開発環境と本番環境間での差異を最小限に抑えました。
-  //                 機能面では、Laravelの標準的な認証機能を活用し、ユーザー登録、ログイン機能に加えて、ユーザー同士がフォローし合える機能も実装しています。さらに、画像の保存にはFirebase Storageを採用し、ユーザーがアップロードした画像をクラウド上に保存します。Vue.jsを一部導入し、「いいね」機能や画像のプレビュー表示を実現。フロントエンドとバックエンドの連携により、スムーズなユーザー体験を提供しています。 `,
-  //   detailImages: [
-  //     'laravel-sns-image1.png',
-  //     'laravel-sns-image2.png',
-  //     'laravel-sns-image3.png',
-  //     'laravel-sns-image4.png',
-  //     'laravel-sns-image5.png',
-  //   ],
-  //   period: '1週間',
-  // },
-  // {
-  //   name: '家計簿アプリ',
-  //   image: '/assets/projects/household.png',
-  //   category: [Category.NEXTJS, Category.PERSONAL],
-  //   skills: ['Next.js', 'Firebase', 'MUI', 'Git', 'Vercel'],
-  //   githubUrl: 'https://github.com/ka-3007/household-next-app',
-  //   projectUrl: 'https://household-next-app.vercel.app/',
-  //   description: `このアプリは、家計簿管理を簡単かつ効率的に行えるWebアプリケーションです。Next.jsで実装されており、シングルページアプリケーションとして動作します。Firebase Authenticationを使用してユーザー認証を行い、収支や収入を簡単に登録できます。登録した収支はカレンダーに表示され、月ごとの収入・支出・合計を一目で把握することができます。
-  //                 また、基本的なカテゴリに加えて、ユーザー自身でカスタムカテゴリを追加することができ、より詳細に収支を管理することができます。月別の収支サマリーを視覚的に表示し、カテゴリごとのグラフも確認できるため、収支状況を簡単に理解することができます。`,
-  //   detailImages: ['household-image1.png', 'household-image2.png', 'household-image3.png', 'household-image4.png'],
-  //   period: '2週間',
-  // },
   {
     name: 'Portfolio',
     image: '/assets/projects/portfolio.png',
@@ -131,14 +101,15 @@ export const projects: Project[] = [
   },
   {
     name: 'デスクSNS',
-    image: '/assets/projects/desklog.png',
+    image: '/assets/projects/desk-log.png',
     category: [Category.NEXTJS, Category.LARAVEL, Category.PERSONAL],
     skills: ['Next.js', 'Laravel', 'Git', 'Vercel', 'PostgreSQL', 'AWS', 'Docker', 'CSS'],
-    projectUrl: 'https://desklog-seven.vercel.app/',
+    projectUrl: 'https://desk-log.com/',
     description: `このデスクSNSは、Next.js を用いたフロントエンドと Laravel によるバックエンドで構築した、デスク環境の共有に特化したSNSアプリです。
                   ユーザーは自身のデスクまわりを写真と説明文とともに投稿でき、その投稿はタイムラインへ流れ、フォローしているユーザーのデスクをまとめて閲覧できます。投稿にはコメントを残すことができ、気になったデスクやアイテムについて意見を交わしたり、作業環境の工夫を共有したりと、ゆるやかなコミュニケーションが生まれる仕組みになっています。
                   また、検索機能により、特定のアイテムを探したり、好みのワークスペースを見つけやすい構成を意識しています。
                   デスクという個性が表れる空間を共有し、他のユーザーとつながりながら新しい発見を得られる場を目指して開発したサービスです。`,
+    detailImages: ['desk-log-image1.png', 'desk-log-image2.png', 'desk-log-image3.png', 'desk-log-image4.png'],
     period: '1年',
   },
 ];
