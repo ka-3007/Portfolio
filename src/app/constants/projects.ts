@@ -109,7 +109,13 @@ export const projects: Project[] = [
                   ユーザーは自身のデスクまわりを写真と説明文とともに投稿でき、その投稿はタイムラインへ流れ、フォローしているユーザーのデスクをまとめて閲覧できます。投稿にはコメントを残すことができ、気になったデスクやアイテムについて意見を交わしたり、作業環境の工夫を共有したりと、ゆるやかなコミュニケーションが生まれる仕組みになっています。
                   また、検索機能により、特定のアイテムを探したり、好みのワークスペースを見つけやすい構成を意識しています。
                   デスクという個性が表れる空間を共有し、他のユーザーとつながりながら新しい発見を得られる場を目指して開発したサービスです。`,
-    detailImages: ['desk-log-image1.png', 'desk-log-image2.png', 'desk-log-image3.png', 'desk-log-image4.png'],
+    detailImages: [
+      'desk-log-image1.png',
+      'desk-log-image2.png',
+      'desk-log-image3.png',
+      'desk-log-image4.png',
+      'desk-log-image5.png',
+    ],
     period: '1年',
   },
 ];
