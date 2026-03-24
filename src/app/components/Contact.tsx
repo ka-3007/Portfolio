@@ -2,7 +2,7 @@
 
 import emailjs from '@emailjs/browser';
 import React, { useRef } from 'react';
-import { AiFillBulb, AiFillTwitterSquare, AiFillGithub } from 'react-icons/ai';
+import { AiFillBulb, AiFillGithub } from 'react-icons/ai';
 
 import ZennIconLink from './common/ZennIconLink';
 
@@ -73,9 +73,9 @@ function Contact() {
                   <a target="_blank" rel="noopener noreferrer" href="https://github.com/ka-3007/" className="text-3xl">
                     <AiFillGithub />
                   </a>
-                  <a target="_blank" rel="noopener noreferrer" href="https://x.com/ka_3007" className="text-3xl">
+                  {/* <a target="_blank" rel="noopener noreferrer" href="" className="text-3xl">
                     <AiFillTwitterSquare />
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
